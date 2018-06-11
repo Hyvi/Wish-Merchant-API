@@ -118,6 +118,7 @@ class WishClient{
 
     $params = $product->getParams(array(
       'id',
+      'parent_sku',
       'name',
       'description',
       'tags',
