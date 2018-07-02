@@ -217,7 +217,8 @@ class WishClient{
         'color',
         'msrp',
         'shipping_time',
-        'main_image'
+        'main_image',
+        'warehouse_name'
       ));
     $response = $this->getResponse('POST','variant/update',$params);
     return "success";
