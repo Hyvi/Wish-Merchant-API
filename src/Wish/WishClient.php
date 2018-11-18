@@ -176,6 +176,17 @@ class WishClient{
     return "success";
   }
 
+  /*批量修改国家运费*/
+  public function multiUpdateShippingById($res){
+    $params = array();
+    foreach($res as $key =>$val){
+      $params[$key] = $val;
+    }
+    $response = $this->getResponse('POST','product/update-multi-shipping',$params);
+    return "success";
+  }
+
+
   public function getShippingById($id,$country){
     $params = array('id'=>$id,'country'=>$country);
     $response = $this->getResponse(
